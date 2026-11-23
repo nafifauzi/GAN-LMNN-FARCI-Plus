@@ -1,0 +1,22 @@
+=== EXPERIMENT RESULTS SUMMARY (STRATIFIED 5-FOLD CV) ===
+  Dataset  Samples  Features    IR  FRBCS_P  FRBCS_R  FRBCS_F1  FRBCS_Time  GAN-LMNN-FRBCS_P  GAN-LMNN-FRBCS_R  GAN-LMNN-FRBCS_F1  GAN-LMNN-FRBCS_Time  FARCI+_P  FARCI+_R  FARCI+_F1  FARCI+_Time  GAN-LMNN-FARCI+_P  GAN-LMNN-FARCI+_R  GAN-LMNN-FARCI+_F1  GAN-LMNN-FARCI+_Time
+wisconsin      569        30  1.68   0.9733   0.5045    0.6630        0.13            0.8571            0.0993             0.1756                 1.77    0.9661    0.5136     0.6686         0.63             0.7536             0.3073              0.4319                  2.37
+     wine      178        13  2.71   0.9667   0.5867    0.7283        0.06            0.7900            0.3356             0.4613                 0.97    0.9600    0.5911     0.7137         0.22             0.8450             0.4200              0.5434                  1.20
+ digits_9     1797        64  8.98   0.0000   0.0000    0.0000        0.19            0.1000            0.0056             0.0105                 9.89    0.0000    0.0000     0.0000         0.83             0.1000             0.0056              0.0105                 16.05
+    ecoli      336         7  8.60   0.6270   0.6857    0.6531        0.04            0.3315            0.8286             0.4632                 1.00    0.5313    0.7143     0.6053         0.34             0.6119             0.5429              0.5461                  1.56
+    glass      214         9 11.59   0.0000   0.0000    0.0000        0.04            0.0979            0.6667             0.1676                 0.85    0.1000    0.0667     0.0800         0.29             0.0556             0.1333              0.0778                  1.23
+    yeast     1484         8 28.10   0.2000   0.0200    0.0364        0.09            0.0384            0.8255             0.0733                 1.72    0.3012    0.3127     0.2859         1.12             0.1043             0.4273              0.1654                  4.08
+ haberman      306         3  2.78   0.2133   0.0500    0.0802        0.05            0.6271            0.2338             0.3367                 1.10    0.3114    0.1125     0.1634         0.41             0.5548             0.2596              0.3456                  1.56
+  vehicle      846        18  3.25   0.7020   0.4217    0.5173        0.08            0.6367            0.4222             0.5061                 1.33    0.7515    0.6790     0.7126         0.61             0.6062             0.4218              0.4937                  2.03
+
+=== OVERALL MEAN PERFORMANCE ACROSS DATASETS ===
+FRBCS              | Precision: 0.4603 | Recall: 0.2836 | F1-Score: 0.3348 | Avg Time: 0.09s
+GAN-LMNN-FRBCS     | Precision: 0.4348 | Recall: 0.4272 | F1-Score: 0.2743 | Avg Time: 2.33s
+FARCI+             | Precision: 0.4902 | Recall: 0.3737 | F1-Score: 0.4037 | Avg Time: 0.56s
+GAN-LMNN-FARCI+    | Precision: 0.4539 | Recall: 0.3147 | F1-Score: 0.3268 | Avg Time: 3.76s
+
+=== NON-PARAMETRIC STATISTICAL TESTS (ONE-SIDED WILCOXON ON F1) ===
+GAN-LMNN-FARCI+ vs. FRBCS           -> W-stat: 17.00, p-value: 0.5781
+GAN-LMNN-FARCI+ vs. GAN-LMNN-FRBCS  -> W-stat: 21.00, p-value: 0.1484
+GAN-LMNN-FARCI+ vs. FARCI+          -> W-stat: 8.00, p-value: 0.9258
+Omnibus Friedman Test (4 methods)   -> Chi2: 2.2308, p-value: 0.5259
